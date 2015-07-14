@@ -1,0 +1,3 @@
+bananamanu_simple_design_homepage:
+    path:     /hello/{name}
+    defaults: { _controller: BananamanuSimpleDesignBundle:Default:index }
