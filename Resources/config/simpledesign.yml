@@ -1,0 +1,17 @@
+siteaccess:
+    groups:
+        ezdemo_frontend_group:
+            - ezdemo_site
+            - ezdemo_site_user
+            - eng
+            - fre
+system:
+    ezdemo_frontend_group:
+        user:
+            layout: BananamanuSimpleDesignBundle::pagelayout.html.twig
+        location_view:
+            full:
+                homepage:
+                    template: "BananamanuSimpleDesignBundle:full:homepage.html.twig"
+                    match:
+                        Identifier\ContentType: [homepage]
