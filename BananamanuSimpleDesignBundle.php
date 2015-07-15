@@ -1,6 +1,6 @@
 <?php
 
-namespace Bananamanu\Bundle\SimpleDesignBundle;
+namespace Bananamanu\SimpleDesignBundle;
 
 use Symfony\Component\HttpKernel\Bundle\Bundle;
 
