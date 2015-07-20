@@ -12,9 +12,9 @@
         </div>
         <div id="navbar" class="navbar-collapse collapse">
             <ul class="nav navbar-nav">
-                <li class="active"><a href="#">Home</a></li>
+                <li {% if ezpublish.rootLocation.id == currentMasterLocationId %}class="active"{% endif %}><a href="{{ path( ezpublish.rootLocation ) }}">{% trans %}Home{% endtrans %}</a></li>
                 {% for location in menu %}
-                <li><a href="{{ path( location ) }}">{{ ez_content_name( location.contentInfo) }}</a></li>
+                <li {% if location.id == currentMasterLocationId %}class="active"{% endif %}><a href="{{ path( location ) }}">{{ ez_content_name( location.contentInfo) }}</a></li>
                 {% endfor %}
             </ul>
         </div><!--/.nav-collapse -->

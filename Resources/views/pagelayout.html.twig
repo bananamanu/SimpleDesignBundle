@@ -26,7 +26,10 @@
 
 <body role="document">
 
-{{ render_esi( controller( 'BananamanuSimpleDesignBundle:Menu:topMenu' ) ) }}
+{% if location is defined and not location.isDraft %}
+    {% set currentLocation=location %}
+{% endif %}
+{{ render( controller( 'BananamanuSimpleDesignBundle:Menu:topMenu', { currentLocationId : currentLocation.id } ) ) }}
 
 <div class="container theme-showcase" role="main">
     {% block content %}
