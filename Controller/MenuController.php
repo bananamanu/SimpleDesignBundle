@@ -26,9 +26,9 @@ class MenuController extends Controller
         // Get current master
         try
         {
-            $currentLocation = $this->getRepository()->getLocationService()->loadLocation($currentLocationId);
+            $currentLocation = $this->getRepository()->getLocationService()->loadLocation( $currentLocationId );
             $pathString = explode( '/', $currentLocation->pathString );
-            if ( isset( $pathString[3] ) )
+            if ( (int) $pathString[3] > 0 )
             {
                 $currentMasterLocationId = $pathString[3];
             }
