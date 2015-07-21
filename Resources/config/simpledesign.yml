@@ -15,3 +15,7 @@ system:
                     template: "BananamanuSimpleDesignBundle:full:homepage.html.twig"
                     match:
                         Identifier\ContentType: [homepage]
+                master:
+                    template: "BananamanuSimpleDesignBundle:full:master.html.twig"
+                    match:
+                        Identifier\ContentType: [master]
