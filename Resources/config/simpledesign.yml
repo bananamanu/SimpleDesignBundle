@@ -19,3 +19,7 @@ system:
                     template: "BananamanuSimpleDesignBundle:full:master.html.twig"
                     match:
                         Identifier\ContentType: [master]
+                edito:
+                    template: "BananamanuSimpleDesignBundle:full:edito.html.twig"
+                    match:
+                        Identifier\ContentType: [edito]
