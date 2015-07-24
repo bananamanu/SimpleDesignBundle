@@ -1,5 +1,5 @@
 system:
-    default:
+    ezdemo_frontend_group:
         templating:
-            view_layout: "BananamanuSimpleDesignBundle::pagelayout.html.twig"
             module_layout: "BananamanuSimpleDesignBundle::pagelayout.html.twig"
+            view_layout: "BananamanuSimpleDesignBundle::pagelayout.html.twig"

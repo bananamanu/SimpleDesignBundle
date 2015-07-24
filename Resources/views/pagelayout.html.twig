@@ -28,6 +28,8 @@
 
 {% if location is defined and not location.isDraft %}
     {% set currentLocation=location %}
+{% else %}
+    {% set currentLocation=ezpublish.rootLocation %}
 {% endif %}
 {{ render( controller( 'BananamanuSimpleDesignBundle:Menu:topMenu', { currentLocationId : currentLocation.id } ) ) }}
 
