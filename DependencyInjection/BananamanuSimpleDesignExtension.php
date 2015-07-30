@@ -42,6 +42,11 @@ class BananamanuSimpleDesignExtension extends Extension implements PrependExtens
         $config = Yaml::parse(file_get_contents($designConfigFile));
         $container->prependExtensionConfig('ezpublish', $config);
         $container->addResource(new FileResource($designConfigFile));
+
+        $configFile = __DIR__ . '/../Resources/config/image_variations.yml';
+        $config = Yaml::parse( file_get_contents( $configFile ) );
+        $container->prependExtensionConfig( 'ezpublish', $config );
+        $container->addResource( new FileResource( $configFile ) );
     }
 }
 

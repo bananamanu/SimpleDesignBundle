@@ -3,16 +3,17 @@
 {% block content %}
 
 <h1>{{ ez_render_field( content, 'name') }}</h1>
-<div class="well">
-{{ ez_render_field( content, 'description') }}
-</div>
+
+    {% if not ez_is_field_empty( content, 'description' ) %}
+    <div class="well">
+        {{ ez_render_field( content, 'description') }}
+    </div>
+    {% endif %}
 
     <div class="row marketing">
-
     {% for location in children %}
         {{ render_esi( controller( 'ez_content:viewLocation', {'locationId': location.id, 'viewType': 'line'} ) ) }}
     {% endfor %}
-
     </div>
 </div>
 {% endblock %}

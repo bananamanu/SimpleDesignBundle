@@ -1,0 +1,9 @@
+system:
+    default:
+        image_variations:
+            editoImage:
+                reference: ~
+                filters:
+                    geometry/scalewidth: [770]
+                    geometry/crop: [770, 390, 0, 0]
+
