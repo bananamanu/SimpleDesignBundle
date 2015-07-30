@@ -16,6 +16,7 @@ system:
                     match:
                         Identifier\ContentType: [homepage]
                 master:
+                    controller: BananamanuSimpleDesignBundle:Master:viewLocationFull
                     template: "BananamanuSimpleDesignBundle:full:master.html.twig"
                     match:
                         Identifier\ContentType: [master]
