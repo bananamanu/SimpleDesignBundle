@@ -1,0 +1,6 @@
+<div class="col-lg-4">
+    <h4><a href="{{ path( location ) }}">{{ ez_render_field( content, 'name') }}</a></h4>
+    {% if not ez_is_field_empty( content, 'introduction' ) %}
+        {{ ez_render_field( content, 'introduction' ) }}
+    {% endif %}
+</div>

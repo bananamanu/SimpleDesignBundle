@@ -24,3 +24,8 @@ system:
                     template: "BananamanuSimpleDesignBundle:full:edito.html.twig"
                     match:
                         Identifier\ContentType: [edito]
+            line:
+                edito:
+                    template: "BananamanuSimpleDesignBundle:line:edito.html.twig"
+                    match:
+                        Identifier\ContentType: [edito]

@@ -9,12 +9,10 @@
 
     <div class="row marketing">
 
-    <div class="col-lg-6">
     {% for location in children %}
         {{ render_esi( controller( 'ez_content:viewLocation', {'locationId': location.id, 'viewType': 'line'} ) ) }}
     {% endfor %}
+
     </div>
-
-
 </div>
 {% endblock %}
