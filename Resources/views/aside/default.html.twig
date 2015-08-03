@@ -1,0 +1,17 @@
+<div class="sidebar-module">
+    <h4>{{ ez_render_field( content, 'name') }}</h4>
+
+    {# Render image if any #}
+    {% if content.fields.image is defined %}
+        {{ ez_render_field( content, 'image', { 'parameters': {'alias': 'sidebar'} } ) }}
+    {% endif %}
+
+    {# Display introduction if provided #}
+    {% if not ez_is_field_empty( content, 'introduction' ) %}
+        {{ ez_render_field( content, 'introduction') }}
+    {% endif %}
+
+    {# In version > 5.4 / 2014.11, ez_url_alias accept contentId as parameter #}
+    <a class="btn btn-default" href="{{ path( "ez_urlalias", {"locationId": content.contentInfo.mainLocationId} ) }}" > More info</a>
+
+</div>

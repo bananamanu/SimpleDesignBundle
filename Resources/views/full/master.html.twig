@@ -4,9 +4,9 @@
 
 <h1>{{ ez_render_field( content, 'name') }}</h1>
 
-    {% if not ez_is_field_empty( content, 'description' ) %}
+    {% if not ez_is_field_empty( content, 'introduction' ) %}
     <div class="well">
-        {{ ez_render_field( content, 'description') }}
+        {{ ez_render_field( content, 'introduction') }}
     </div>
     {% endif %}
 

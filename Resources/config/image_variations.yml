@@ -1,9 +1,19 @@
 system:
     default:
         image_variations:
-            editoImage:
+            edito:
                 reference: ~
                 filters:
                     geometry/scalewidth: [770]
-                    geometry/crop: [770, 390, 0, 0]
+                    geometry/crop: [770, 360, 0, 0]
+            sidebar:
+                reference: ~
+                filters:
+                    geometry/scalewidth: [263]
+                    geometry/crop: [263, 135, 0, 0]
+            itemImage:
+                reference: ~
+                filters:
+                   geometry/scalewidth: [360]
+                   geometry/crop: [360, 180, 0, 0]
 

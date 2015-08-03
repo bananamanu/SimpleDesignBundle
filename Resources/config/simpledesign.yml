@@ -29,3 +29,9 @@ system:
                     template: "BananamanuSimpleDesignBundle:line:edito.html.twig"
                     match:
                         Identifier\ContentType: [edito]
+        content_view:
+            aside:
+                default:
+                    template: "BananamanuSimpleDesignBundle:aside:default.html.twig"
+                    match:
+                        Identifier\ContentType: [edito, master]
