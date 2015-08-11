@@ -1,7 +1,7 @@
 system:
     default:
         image_variations:
-            edito:
+            editoImage:
                 reference: ~
                 filters:
                     geometry/scalewidth: [770]

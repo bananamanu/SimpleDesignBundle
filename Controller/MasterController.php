@@ -21,8 +21,8 @@ class MasterController extends Controller
     {
         // Get children content location
         //@TODO include sort order
-        $helper = $this->get( 'bananamanu_simple_design.subelement_helper' );
-        $children = $helper->getSubElementLocation( $locationId );
+        $helper = $this->get('bananamanu_simple_design.subelement_helper');
+        $children = $helper->getSubElementLocation($locationId);
         $params['children'] = $children;
 
         return $this->get( 'ez_content' )->viewLocation(
