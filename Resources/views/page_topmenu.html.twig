@@ -8,9 +8,16 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a class="navbar-brand" href="#">Bananamanu</a>
         </div>
         <div id="navbar" class="navbar-collapse collapse">
+
+            <p class="navbar-text pull-right">
+                {% if user.contentInfo.name != "Anonymous User" %}
+                    {{ user.contentInfo.name }} | <a href="/logout">{% trans %}Logout{% endtrans %}</a>
+                {% else %}
+                    <a href="/login">{% trans %}Login{% endtrans %}</a>
+                {% endif %}
+            </p>
             <ul class="nav navbar-nav">
                 <li {% if ezpublish.rootLocation.id == currentMasterLocationId %}class="active"{% endif %}><a href="{{ path( ezpublish.rootLocation ) }}">{% trans %}Home{% endtrans %}</a></li>
                 {% for location in menu %}
@@ -18,5 +25,6 @@
                 {% endfor %}
             </ul>
         </div><!--/.nav-collapse -->
+
     </div>
 </nav>

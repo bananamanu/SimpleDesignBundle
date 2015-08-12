@@ -42,7 +42,16 @@ class MenuController extends Controller
             $currentMasterLocationId = $rootLocationId;
         }
 
+        // Get current user
+        $user = $this->getRepository()->getCurrentUser();
+
+        // Cache control
+        $response->setSharedMaxAge(84600);
+        $response->setVary('X-User-Hash');
+        $response->setPublic();
+
         $parameters['menu'] = $menu;
+        $parameters['user'] = $user;
         $parameters['currentMasterLocationId'] = $currentMasterLocationId;
         return $this->render( 'BananamanuSimpleDesignBundle::page_topmenu.html.twig', $parameters, $response );
     }
